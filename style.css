@@ -1,3 +1,72 @@
-body{
-    color:white;
+body {
+    background-color: #151515;
+    color: white;
+    font-size: 50pt;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    text-align: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+}
+
+#display{
+    width:94%;
+    height: 15vw;
+    margin-left:2%;
+    background-color: #191919;
+    border-radius: 16px;
+    font-size:10vw;
+    text-align: right;
+    padding-right:30px;
+}
+
+#text{
+    color:red;
+}
+
+table {
+    cursor: pointer;
+    margin-top: 7%;
+    table-layout: fixed;
+    width:94%;
+    margin-left:2%;
+}
+
+td {
+    background-color: #252525;
+    border-radius: 16px;
+    padding: 15px;
+}
+
+td:hover {
+    background-color: #404040;
+    transition: all 300ms ease-in-out;
+}
+
+td:active{
+    color:yellow;
+    transition: color 80ms;
+}
+
+td.nostyle:hover{
+    pointer-events: none;
+    background-color: #151515;
+}
+
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+.smaller {
+    font-size: 30pt;
+    font-weight: 600;
+}
+
+.red {
+    color: red;
 }
