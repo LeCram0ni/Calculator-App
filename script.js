@@ -4,3 +4,9 @@ function start(){
 
     //console.log("Test");
 }
+
+function update(){
+    document.getElementById('text').innerHTML += 'test';
+    
+    console.log("test");
+}
