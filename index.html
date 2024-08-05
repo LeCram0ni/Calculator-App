@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
 
-<body onload="start()">
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+  <body onload="start()">
     <div id="display">
-        <!--inject text-->
+      <!--inject text-->
+      <div id="text">0</div>
     </div>
-    <table class="prevent-select">
+    <div id="table-div">
+      <table class="prevent-select">
         <tbody>
-            <tr>
-                <td onclick="clear()" class="red">C</td>
-                <td class="nostyle"></td>
-                <td class="smaller red">DEL</td>
-                <td>/</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>x</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td onclick="update(1)">1</td>
-                <td onclick="update(2)">2</td>
-                <td onclick="update(3)">3</td>
-                <td onclick="update('+')">+</td>
-            </tr>
-            <tr>
-                <td onclick="update('*(-1)')" class="smaller">+/-</td>
-                <td onclick="update(0)">0</td>
-                <td onclick="update('.')">,</td>
-                <td onclick="calculate()">=</td>
-            </tr>
+          <tr>
+            <td onclick="clearDisplay()" class="red">C</td>
+            <td class="nostyle"></td>
+            <td onclick="deleteOne()" class="smaller red">DEL</td>
+            <td onclick="update('/')" class="darker">/</td>
+          </tr>
+          <tr>
+            <td onclick="update(7)">7</td>
+            <td onclick="update(8)">8</td>
+            <td onclick="update(9)">9</td>
+            <td onclick="update('*')" class="darker">x</td>
+          </tr>
+          <tr>
+            <td onclick="update(4)">4</td>
+            <td onclick="update(5)">5</td>
+            <td onclick="update(6)">6</td>
+            <td onclick="update('-')" class="darker">-</td>
+          </tr>
+          <tr>
+            <td onclick="update(1)">1</td>
+            <td onclick="update(2)">2</td>
+            <td onclick="update(3)">3</td>
+            <td onclick="update('+')" class="darker">+</td>
+          </tr>
+          <tr>
+            <td onclick="update('*(-1)')" class="smaller">+/-</td>
+            <td onclick="update(0)">0</td>
+            <td onclick="update('.')">,</td>
+            <td onclick="calculate()" class="darker">=</td>
+          </tr>
         </tbody>
-    </table>
+      </table>
+    </div>
+    <div class="checkbox-wrapper-22">
+      <label class="switch" for="checkbox">
+        <input type="checkbox" id="checkbox" class="check-box" />
+        <div class="slider round"></div>
+      </label>
+      <h6>Overwrite result?</h6>
+    </div>
     <script src="script.js"></script>
-    
-</body>
-
+  </body>
 </html>
