@@ -19,7 +19,7 @@
     <table class="prevent-select">
         <tbody>
             <tr>
-                <td class="red">C</td>
+                <td onclick="clear()" class="red">C</td>
                 <td class="nostyle"></td>
                 <td class="smaller red">DEL</td>
                 <td>/</td>
@@ -37,16 +37,16 @@
                 <td>-</td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>+</td>
+                <td onclick="update(1)">1</td>
+                <td onclick="update(2)">2</td>
+                <td onclick="update(3)">3</td>
+                <td onclick="update('+')">+</td>
             </tr>
             <tr>
-                <td class="smaller">+/-</td>
-                <td>0</td>
-                <td>,</td>
-                <td onclick="update();">=</td>
+                <td onclick="update('*(-1)')" class="smaller">+/-</td>
+                <td onclick="update(0)">0</td>
+                <td onclick="update('.')">,</td>
+                <td onclick="calculate()">=</td>
             </tr>
         </tbody>
     </table>
